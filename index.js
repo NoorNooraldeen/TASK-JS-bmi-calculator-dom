@@ -11,16 +11,24 @@ function calculateBMI() {
   let hightM =height /100;
 // calc BMI 
 let bmi = weight / (hightM *hightM);
+let bmiresult;
 
 // show he result 
 console.log ("your BMI is ;" + bmi.toFixed(2));
 
 if (bmi < 18.5) {
-  bmiCatogery = "underwated";
+  bmiresult = "underwated";
 }
 else if (bmi >= 18.5 && bmi <25.0){
-  bmiCatogery = "Healthy Weight";
+  bmiresult = "Healthy Weight";
 }else if (bmi >= 25.0 && bmi < 30.0){
+  bmiresult = "overweighted";
+
   
 }
+else{
+  bmiresult = "obesity";
+}
+console.log(bmiresult);
+
 }
